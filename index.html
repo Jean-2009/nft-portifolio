@@ -3,13 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NFT Card List</title>
+  <title>NeonNFT - NFT Card List</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <header class="header">
+    <a href="#" class="header__brand">
+      <img src="images/logo.png" alt="NeonNFT logo">
+      <span>NeonNFT</span>
+    </a>
+
+    <button class="header__toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <nav class="header__nav" id="nav">
+      <a href="#">Explore</a>
+      <a href="#">Collections</a>
+      <a href="#">About</a>
+      <a href="#" class="header__button">Connect</a>
+    </nav>
+  </header>
+
   <main>
     <section class="card-list">
 
@@ -135,5 +152,16 @@
 
     </section>
   </main>
+
+  <script>
+    const toggle = document.querySelector('.header__toggle');
+    const nav = document.getElementById('nav');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+      toggle.textContent = isOpen ? '✕' : '☰';
+    });
+  </script>
 </body>
 </html>

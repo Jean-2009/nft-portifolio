@@ -77,7 +77,7 @@ Todos os commits foram escritos em inglês.
 ## 🚀 Como rodar localmente
 
 ```bash
-git clone https://github.com/SEU-USUÁRIO/nft-portifolio.git
+git clone https://github.com/Jean-2009/nft-portifolio.git
 cd nft-portifolio
 ```
 

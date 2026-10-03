@@ -48,7 +48,7 @@ O design do header e dos cards foi inspirado em marketplaces de NFT, como:
 
 - [OpenSea](https://opensea.io/): header com logo à esquerda e menu à direita
 - [Rarible](https://rarible.com/): fundo escuro e cards em destaque
-- NOME-DO-SITE-3 (se tiverem usado outro, coloquem aqui)
+- NeonNFT
 
 ## 🌿 Fluxo de trabalho com Git
 
@@ -77,7 +77,7 @@ Todos os commits foram escritos em inglês.
 ## 🚀 Como rodar localmente
 
 ```bash
-git clone https://github.com/SEU-USUÁRIO/nft-portifolio.git
+git clone https://github.com/Jean-2009/nft-portifolio.git
 cd nft-portifolio
 ```
 

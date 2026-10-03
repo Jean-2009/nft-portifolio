@@ -1,0 +1,62 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: #fff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background: var(--bg);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  max-width: 350px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 255, 245, .15);
+}
+
+.card__image { position: relative; border-radius: .5rem; overflow: hidden; }
+.card__image img { width: 100%; display: block; }
+
+.card__overlay {
+  position: absolute; inset: 0;
+  background: hsla(178, 100%, 50%, .5);
+  display: grid; place-items: center;
+  opacity: 0; transition: opacity .3s;
+}
+.card__image:hover .card__overlay { opacity: 1; cursor: pointer; }
+
+.card__title { color: var(--white); font-size: 1.4rem; font-weight: 400; }
+.card__title:hover { color: var(--cyan); cursor: pointer; }
+.card__text { color: var(--soft-blue); font-weight: 300; line-height: 1.5; }
+
+.card__info { display: flex; justify-content: space-between; font-size: .95rem; }
+.card__price { color: var(--cyan); font-weight: 600; }
+.card__time { color: var(--soft-blue); }
+
+hr { border: 0; border-top: 1px solid var(--line); }
+
+.card__author { display: flex; align-items: center; gap: 1rem; color: var(--soft-blue); font-size: .95rem; }
+.card__author img { width: 2rem; border-radius: 50%; border: 2px solid var(--white); }
+.card__author a { color: var(--white); text-decoration: none; }
+.card__author a:hover { color: var(--cyan); }
